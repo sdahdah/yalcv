@@ -14,6 +14,9 @@
 \RequirePackage{tabularx}         % \begin{tabularx}
 \RequirePackage{parskip}          % Gets rid of leading indentation
 \RequirePackage[pdftex]{hyperref} % \href{}
+\RequirePackage{amsmath}          % \boldsymbol{}
+
+\renewcommand\labelitemi{$\boldsymbol{\cdot}$}
 
 \pagenumbering{gobble} % Disable page numbering
 
@@ -72,7 +75,7 @@
         \textbf{#1} & #3 \\
         \textit{#4} & \textit{#2}
     \end{tabularx}%
-    \vspace{0.5ex}%
+    \vspace{1ex} \\
 }
 
 \newenvironment{cvskills}[0]{%
@@ -82,5 +85,5 @@
 }
 
 \newcommand{\cvskill}[2]{%
-    \textbf{#1} & #2 \\[1ex]%
+    \textbf{#1} & #2 \vspace{1ex} \\
 }
