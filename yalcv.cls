@@ -42,7 +42,9 @@
     \begin{tabularx}{\textwidth}{lXr}
         \textit{#1} & & \textit{#2}
     \end{tabularx}%
+    \vspace{-1ex}
     \begin{itemize}
+        \itemsep-1ex
 }{%
     \end{itemize}
 }
@@ -58,16 +60,19 @@
     \begin{tabularx}{\textwidth}{lXr}
         \textit{#1} & & \textit{#2}
     \end{tabularx}%
+    \vspace{-1ex}
     \begin{itemize}
+        \itemsep-1ex
 }{%
     \end{itemize}
 }
 
 \newcommand{\cvaward}[4]{%
-    \begin{tabularx}{\textwidth}{lXr}
-        \textbf{#1} & & #3 \\
-        \textit{#4} & & \textit{#2}
+    \begin{tabularx}{\textwidth}{Xr}
+        \textbf{#1} & #3 \\
+        \textit{#4} & \textit{#2}
     \end{tabularx}%
+    \vspace{0.5ex}%
 }
 
 \newenvironment{cvskills}[0]{%
@@ -77,5 +82,5 @@
 }
 
 \newcommand{\cvskill}[2]{%
-    \textbf{#1} & #2 \\%
+    \textbf{#1} & #2 \\[1ex]%
 }
