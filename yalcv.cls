@@ -13,8 +13,9 @@
 \RequirePackage{titlesec}         % \titleformat{}
 \RequirePackage{tabularx}         % \begin{tabularx}
 \RequirePackage{parskip}          % Gets rid of leading indentation
-\RequirePackage[pdftex]{hyperref} % \href{}
+\RequirePackage[pdftex,colorlinks]{hyperref} % \href{}
 \RequirePackage{amsmath}          % \boldsymbol{}
+\hypersetup{hidelinks=true}
 
 \renewcommand\labelitemi{$\boldsymbol{\cdot}$}
 
@@ -86,4 +87,14 @@
 
 \newcommand{\cvskill}[2]{%
     \textbf{#1} & #2 \vspace{1ex} \\
+}
+
+\newenvironment{cvcourses}[0]{%
+    \tabularx{\textwidth}{llX}%
+}{%
+    \endtabularx{}%
+}
+
+\newcommand{\cvcourse}[3]{%
+    \textbf{#1} & #2 & #3 \vspace{1ex} \\
 }
