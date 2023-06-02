@@ -98,3 +98,13 @@
 \newcommand{\cvcourse}[3]{%
     \textbf{#1} & #2 & #3 \vspace{1ex} \\
 }
+
+\newenvironment{cvpublications}[0]{%
+    \tabularx{\textwidth}{lX}%
+}{%
+    \endtabularx{}%
+}
+
+\newcommand{\cvpublication}[2]{%
+    #1 & #2 \vspace{1ex} \\
+}
